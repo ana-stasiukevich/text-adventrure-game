@@ -1,45 +1,42 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Actions/Use")]
 public class Use : Action
 {
-public override void RespondToInput(GameController controller, string noun)
+public override void RespondToInput(TextController controller, string noun)
     {
         if(UseItems(controller, controller.player.currentLocation.items, noun))
-        return;
+            return;
 
         if(UseItems(controller, controller.player.inventory, noun))
-        return;
+            return;
 
-        controller.currentText.text = "Nothing happens!";
-
+        controller.currentText.text = "Nothing happens!\n";
     }
 
-    private bool UseItems(GameController controller, List<Item> items, string noun)
+    private bool UseItems(TextController controller, List<Item> items, string noun)
     {
         foreach (Item item in items)
         {
             if (item.itemName == noun)
             {
-                if(controller.player.CanUseItem(controller, item))
+                if(controller.player.CanUseItem(item))
                 {
                     if (item.InteractWith(controller, "use"))
                     {
                         return true;
                     }
-                }        
-                controller.currentText.text = "The " + noun + " does nothing.";
+                }
+                
+                controller.currentText.text = "The " + noun + " does nothing\n";
                 return true;
-
             }
 
             if (string.IsNullOrWhiteSpace(noun))
             {        
-                controller.currentText.text = "What should be used?";
+                controller.currentText.text = "What should be used?\n";
                 return true;
-
             }
         }
         

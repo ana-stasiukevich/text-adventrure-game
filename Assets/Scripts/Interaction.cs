@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,11 +11,11 @@ public class Interaction
 
     public string textToMatch;
 
-    public List<Item> itemsToDisable = new List<Item>();
-    public List<Item> itemsToEnable = new List<Item>();
+    public List<Item> itemsToDisable = new();
+    public List<Item> itemsToEnable = new();
 
-    public List<Connection> connectionsToDisable = new List<Connection>();
-    public List<Connection> connectionsToEnable = new List<Connection>();
+    public List<Connection> connectionsToDisable = new();
+    public List<Connection> connectionsToEnable = new();
 
     public Location teleportLocation;
 }

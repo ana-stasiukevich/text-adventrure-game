@@ -1,36 +1,12 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public Location currentLocation;
-    public List<Item> inventory = new List<Item>();
+    public List<Item> inventory = new();
 
-    internal bool HasItemByName(string noun)
-    {
-        foreach (Item item in inventory)
-        {
-            if (item.itemName.ToLower() == noun.ToLower())
-                return true;
-        }
-        return false;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public bool ChangeLocation(GameController controller, string connectionNoun)
+    public bool ChangeLocation(string connectionNoun)
     {
         Connection connection = currentLocation.GetConnection(connectionNoun);
         if (connection != null)
@@ -41,25 +17,31 @@ public class Player : MonoBehaviour
                 return true;
             }
         }
+
         return false;
     }
 
-    internal bool CanGiveToItem(GameController controller, Item item)
+    internal bool CanGiveToItem(Item item)
     {
         return item.playerCanGiveTo;
     }
 
-    internal bool CanTalkToItem(GameController controller, Item item)
+    internal bool CanReadFromItem( Item item)
+    {
+        return item.playerCanReadFrom;
+    }
+
+    internal bool CanTalkToItem(Item item)
     {
         return item.playerCanTalkTo;
     }
 
-    public void Teleport(GameController controller, Location destination)
+    public void Teleport(Location destination)
     {
         currentLocation = destination;
     }
 
-    internal bool CanUseItem(GameController controller, Item item)
+    internal bool CanUseItem(Item item)
     {
         if (item.targetItem == null)
             return true;
@@ -79,6 +61,16 @@ public class Player : MonoBehaviour
         {
             if (item == itemToCheck && item.itemEnabled)
             return true;
+        }
+
+        return false;
+    }
+    internal bool HasItemByName(string noun)
+    {
+        foreach (Item item in inventory)
+        {
+            if (item.itemName.ToLower() == noun.ToLower())
+                return true;
         }
 
         return false;

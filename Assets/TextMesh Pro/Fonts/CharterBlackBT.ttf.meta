@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: ca684b1f29a7ab6409e46860cd2d5e3d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Charter BT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 429c9d89fb48cd544b846fb226ebb98d, type: 3}
+  - {fileID: 12800000, guid: 67694829c1be6d642b78e0b75481de1a, type: 3}
+  - {fileID: 12800000, guid: b12ca3b3f6d2f2b46acb4f10450ccab2, type: 3}
+  - {fileID: 12800000, guid: a4504f4610d875d429e51ff9086ad0c7, type: 3}
+  - {fileID: 12800000, guid: 583538d991c07c74fa6483ebaa9dca4f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

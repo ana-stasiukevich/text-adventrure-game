@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
     public string itemName;
+
     [TextArea]
     public string description;
 
     public bool playerCanTake;
+    public bool playerCanReadFrom = false;
     public bool playerCanTalkTo = false;
     public bool playerCanGiveTo = false;
     public bool itemEnabled = true;
@@ -17,7 +17,7 @@ public class Item : MonoBehaviour
 
     public Item targetItem = null;
 
-    public bool InteractWith(GameController controller, string actionKeyword, string noun = "")
+    public bool InteractWith(TextController controller, string actionKeyword, string noun = "")
     {
         foreach (Interaction interaction in interactions)
         {
@@ -48,7 +48,7 @@ public class Item : MonoBehaviour
 
                 if(interaction.teleportLocation != null)
                 {
-                    controller.player.Teleport(controller, interaction.teleportLocation);
+                    controller.player.Teleport(interaction.teleportLocation);
                 }
 
                 controller.currentText.text = interaction.responce;

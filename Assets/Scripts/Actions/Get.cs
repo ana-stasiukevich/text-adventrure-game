@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Actions/Get")]
 public class Get : Action
 {
-    public override void RespondToInput(GameController controller, string noun)
+    public override void RespondToInput(TextController controller, string noun)
     {
         foreach(Item item in controller.player.currentLocation.items)
         {
@@ -15,11 +13,12 @@ public class Get : Action
                 {
                     controller.player.inventory.Add(item);
                     controller.player.currentLocation.items.Remove(item);
-                    controller.currentText.text = "You take the " + noun;
+                    controller.currentText.text = "You take the " + noun + "\n";
                     return;
                 }
             }
         }
-        controller.currentText.text = "You can't get that";
+
+        controller.currentText.text = "You can't get that\n";
     }
 }

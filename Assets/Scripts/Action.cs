@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Action : ScriptableObject
 {
-    public string keyword;
-    public abstract void RespondToInput(GameController controller, string noun);
+    [SerializeField]
+    internal string keyword;
+    public abstract void RespondToInput(TextController controller, string noun);
 }

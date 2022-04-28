@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameController : MonoBehaviour
+public class TextController : MonoBehaviour
 {
     public TMP_InputField textEntryField;
     public TMP_Text historyText;
@@ -15,25 +13,19 @@ public class GameController : MonoBehaviour
 
     [TextArea]
     [SerializeField] string introText;
-    // Start is called before the first frame update
+
     void Start()
     {
         historyText.text = introText;
-        textEntryField.ActivateInputField();
         DisplayLocation();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void DisplayLocation(bool additive = false)
     {
-        string description = player.currentLocation.description +"\n";
-        description += player.currentLocation.GetConnectionsText();
+        string description = "\n"+ player.currentLocation.description +"\n";
+        description += "\n" + player.currentLocation.GetConnectionsText();
         description += player.currentLocation.GetItemsText();
+
         if (additive)
         {
             currentText.text += "\n" + description;
@@ -47,7 +39,6 @@ public class GameController : MonoBehaviour
         LogCurrenttext();
         ProcessInput(textEntryField.text);
         textEntryField.text = "";
-        textEntryField.ActivateInputField();
     }
     void LogCurrenttext()
     {
@@ -72,10 +63,12 @@ public class GameController : MonoBehaviour
                 {
                     action.RespondToInput(this, seperatedWords[1]);
                 }
+
                 else
                 {
                     action.RespondToInput(this, "");
                 }
+
                 return;
             }
         }

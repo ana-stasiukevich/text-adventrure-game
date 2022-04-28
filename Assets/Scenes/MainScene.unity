@@ -237,12 +237,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2133123322}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
   m_OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8140602}
+        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+        m_MethodName: ActivateInputField
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnDeselect:
     m_PersistentCalls:
       m_Calls: []
@@ -266,7 +290,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 0293db9c57124644289283ca552811c9, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -409,13 +433,14 @@ MonoBehaviour:
   itemName: head
   description: a smashed statue <b>Head</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   itemEnabled: 1
   interactions:
   - action: {fileID: 11400000, guid: c2d9e20f78cef104694ceadfbb854879, type: 2}
     responce: "You pick up the stone head in both hands. You turn the face towards
-      you, it looks familiar. You mouth the word, \u201CMerlin\u201D"
+      you, it looks familiar. You mouth the word, \n\u201CMerlin\u201D"
     textToMatch: 
     itemsToDisable: []
     itemsToEnable: []
@@ -520,7 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: west
-  description: To the <b>west</b> lies a shore
+  description: To the <b>west</b> lies a shore.
   location: {fileID: 559275865}
   connectionEnabled: 1
 --- !u!1 &136528130
@@ -568,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: north
-  description: To the <b>north</b> is the rest of the Island
+  description: To the <b>north</b> is the rest of the Island.
   location: {fileID: 1450878660}
   connectionEnabled: 1
 --- !u!1 &145473818
@@ -616,8 +641,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: serpent
-  description: a giant snake like <b>serpent</b>
+  description: a giant snake like <b>Serpent</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   itemEnabled: 0
@@ -671,6 +697,141 @@ MonoBehaviour:
   description: and an antechamber to the <b>west</b>.
   location: {fileID: 89022676}
   connectionEnabled: 1
+--- !u!1 &167831167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167831168}
+  - component: {fileID: 167831170}
+  - component: {fileID: 167831169}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &167831168
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167831167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1789335884}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -17.1, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &167831169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167831167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: music on/off
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0293db9c57124644289283ca552811c9, type: 2}
+  m_sharedMaterial: {fileID: -8196277931814343281, guid: 0293db9c57124644289283ca552811c9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4288846209
+  m_fontColor: {r: 0.5058824, g: 0.6, b: 0.63529414, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 93368250
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -33.720764, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &167831170
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167831167}
+  m_CullTransparentMesh: 1
 --- !u!1 &298464626
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +879,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &439653166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439653167}
+  - component: {fileID: 439653168}
+  m_Layer: 0
+  m_Name: Plaque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &439653167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439653166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 974927832}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439653168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439653166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba63c16273b6104eb314f07cb77ddb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: plaque
+  description: a <b>Plaque</b> embedded in the stone, it has something written on
+    it
+  playerCanTake: 0
+  playerCanReadFrom: 1
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  itemEnabled: 1
+  interactions:
+  - action: {fileID: 11400000, guid: b734fb7aa81d89743986b52d0535ee99, type: 2}
+    responce: '"Someone called Ana has been known to pass through here."'
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    teleportLocation: {fileID: 0}
+  targetItem: {fileID: 0}
 --- !u!1 &446782963
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,8 +1062,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0293db9c57124644289283ca552811c9, type: 2}
+  m_sharedMaterial: {fileID: -8196277931814343281, guid: 0293db9c57124644289283ca552811c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1009,13 +1232,14 @@ MonoBehaviour:
   itemName: tapestry
   description: a thread worn <b>Tapestry</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   itemEnabled: 1
   interactions:
   - action: {fileID: 11400000, guid: c2d9e20f78cef104694ceadfbb854879, type: 2}
     responce: "You wipe away years of dust and cobwebs to reveal the tapestry is
-      a moth-eaten depictionof ancient Albion. You mouth the word \u201CAlbion\u201D."
+      a moth-eaten depiction of ancient Albion. You mouth the word\n\u201CAlbion\u201D."
     textToMatch: 
     itemsToDisable: []
     itemsToEnable: []
@@ -1152,7 +1376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: north
-  description: To the <b>south</b> is the island
+  description: To the <b>south</b> is the island.
   location: {fileID: 1450878660}
   connectionEnabled: 1
 --- !u!1 &559275863
@@ -1301,6 +1525,7 @@ RectTransform:
   - {fileID: 2069152745}
   - {fileID: 8140601}
   - {fileID: 1133906200}
+  - {fileID: 1789335884}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1344,7 +1569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 10, y: 68.781}
+  m_AnchoredPosition: {x: 10, y: 101}
   m_SizeDelta: {x: -121.1589, y: 122.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614539125
@@ -1405,8 +1630,8 @@ MonoBehaviour:
 
     Hello'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f55351e3612d42a4cd72b1b1ffdad, type: 2}
+  m_sharedMaterial: {fileID: -3728546087377688401, guid: 5d9f55351e3612d42a4cd72b1b1ffdad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1466,7 +1691,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -45.571564, y: -87.8065, z: -27.668457, w: -4.785202}
+  m_margin: {x: -45.571564, y: -82.60814, z: -27.668457, w: -31.926575}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1525,8 +1750,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: coins
-  description: <b>GoldenCoins</b>
+  description: golden <b>Coins</b>
   playerCanTake: 1
+  playerCanReadFrom: 0
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   itemEnabled: 0
@@ -1577,7 +1803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: south
-  description: <b>south</b> returns to the chapel
+  description: <b>South</b> returns to the chapel.
   location: {fileID: 446782965}
   connectionEnabled: 1
 --- !u!1 &784019383
@@ -1680,6 +1906,7 @@ MonoBehaviour:
   itemName: ferryman
   description: a robed <b>Ferryman</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 1
   playerCanGiveTo: 0
   itemEnabled: 1
@@ -1693,7 +1920,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   - action: {fileID: 11400000, guid: ceb2fbbdaf1e8814eae45a61ae37dbb9, type: 2}
-    responce: Where do you seek?
+    responce: '"Where do you seek?"'
     textToMatch: merlin
     itemsToDisable:
     - {fileID: 842488491}
@@ -1748,7 +1975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: south
-  description: To the <b>south</b> you a large tree.
+  description: To the <b>south</b> you see a large tree.
   location: {fileID: 77450232}
   connectionEnabled: 1
 --- !u!1 &863217475
@@ -1762,7 +1989,7 @@ GameObject:
   - component: {fileID: 863217477}
   - component: {fileID: 863217476}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: TextController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1794,16 +2021,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ceb2fbbdaf1e8814eae45a61ae37dbb9, type: 2}
   - {fileID: 11400000, guid: 6993b010e165d0d4bb7d5885a819eb1a, type: 2}
   - {fileID: 11400000, guid: ceaf4417ce50a954c9c96da2b4c99e82, type: 2}
-  introText: A thunder crack of splintering wood wrenches you from darkness. A scream
+  - {fileID: 11400000, guid: b734fb7aa81d89743986b52d0535ee99, type: 2}
+  introText: "A thunder crack of splintering wood wrenches you from darkness. A scream
     of shock, heat and sweat floods onto the cold shaking ground. Reborn in moss
-    and dirt you take one gasping breath ofacrid smoke then another, and another.
-    You wretch and convulse awareness spreading feeling for breaks in muscle and
-    bone, stretching out to fingers toes then retreating to slow a pounding heart.
-    Senses waking you feel the moss on your face the earth in your mouth, aching
-    trembling pushing up back onto your knees you open your eyes. Coming into focus
-    dry roots wrap round sap covered arms you tear them off wiping the dirt from
-    yourself. You grab a lose branch and use it to stand and prop yourself. In front
-    of you the earth fades into a dense white fog.
+    and dirt, you take one gasping breath of acrid smoke, then another, and another.
+    You wretch and convulse, awareness spreading, feeling for breaks in muscle and
+    bone, stretching out to fingers, toes, then retreating to slow a pounding heart.
+    Senses waking, you feel the moss on your face, the earth in your mouth.\nAching,
+    trembling, pushing up back onto your knees, you open your eyes. Coming into focus,
+    dry roots wrap round sap covered arms. You tear them off, wiping the dirt from
+    yourself. You grab a lose branch and use it to stand and prop yourself. \nIn
+    front of you the earth fades into a dense white fog."
 --- !u!4 &863217477
 Transform:
   m_ObjectHideFlags: 0
@@ -1812,13 +2040,154 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863217475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 340.40863, y: 247.87384, z: -0.0061306804}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &927690826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927690828}
+  - component: {fileID: 927690827}
+  - component: {fileID: 927690829}
+  m_Layer: 0
+  m_Name: MusicSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &927690827
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927690826}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: eed1978bb14c95f42b518a2a844f9418, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &927690828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927690826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 163.34921, y: 448.83432, z: -4.686467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927690829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927690826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e4702e4a7023548abf2e13c25a1073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &958625440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,12 +2235,13 @@ MonoBehaviour:
   itemName: ferryman
   description: a robed <b>Ferryman</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 1
   playerCanGiveTo: 1
   itemEnabled: 0
   interactions:
   - action: {fileID: 11400000, guid: 6993b010e165d0d4bb7d5885a819eb1a, type: 2}
-    responce: What will you pay?
+    responce: '"What will you pay?"'
     textToMatch: 
     itemsToDisable: []
     itemsToEnable: []
@@ -1879,7 +2249,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   - action: {fileID: 11400000, guid: ceaf4417ce50a954c9c96da2b4c99e82, type: 2}
-    responce: What will you pay?
+    responce: 
     textToMatch: coins
     itemsToDisable: []
     itemsToEnable: []
@@ -1911,7 +2281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974927831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.66669, y: 266.7173, z: 3.434637}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1926,6 +2296,7 @@ Transform:
   - {fileID: 500101959}
   - {fileID: 736711766}
   - {fileID: 145473819}
+  - {fileID: 439653167}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2027,7 +2398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectionName: east
   description: To the <b>east</b> lies a shore.
-  location: {fileID: 1024158265}
+  location: {fileID: 1982355706}
   connectionEnabled: 1
 --- !u!1 &1133906199
 GameObject:
@@ -2297,7 +2668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: west
-  description: To the <b>west</b> is the island
+  description: To the <b>west</b> is the island.
   location: {fileID: 1450878660}
   connectionEnabled: 1
 --- !u!1 &1290251344
@@ -2381,8 +2752,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Enter text...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0293db9c57124644289283ca552811c9, type: 2}
+  m_sharedMaterial: {fileID: -8196277931814343281, guid: 0293db9c57124644289283ca552811c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2547,7 +2918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432616953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 340.40863, y: 247.87384, z: -0.0061306804}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2620,7 +2991,8 @@ MonoBehaviour:
   - {fileID: 851494439}
   - {fileID: 123279493}
   - {fileID: 1030987354}
-  items: []
+  items:
+  - {fileID: 439653168}
 --- !u!1 &1477035565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,12 +3040,13 @@ MonoBehaviour:
   itemName: ferryman
   description: a robed <b>Ferryman</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 1
   playerCanGiveTo: 0
   itemEnabled: 0
   interactions:
   - action: {fileID: 11400000, guid: 6993b010e165d0d4bb7d5885a819eb1a, type: 2}
-    responce: Where do you seek?
+    responce: '"Where do you seek?"'
     textToMatch: 
     itemsToDisable: []
     itemsToEnable: []
@@ -2681,7 +3054,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   - action: {fileID: 11400000, guid: ceb2fbbdaf1e8814eae45a61ae37dbb9, type: 2}
-    responce: What will you pay?
+    responce: '"What will you pay?"'
     textToMatch: albion
     itemsToDisable:
     - {fileID: 1477035567}
@@ -2738,14 +3111,15 @@ MonoBehaviour:
   itemName: well
   description: an old stone <b>Well</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   itemEnabled: 1
   interactions:
   - action: {fileID: 11400000, guid: c2d9e20f78cef104694ceadfbb854879, type: 2}
-    responce: Looking into the well you see nothing but two glowing eyes and then
-      rows of sparkling teeth rushing up to meet you. You fall back and a great serpent
-      bursts forth coiling itself round the well towering over you.
+    responce: "Looking into the well you see nothing but two glowing eyes and then
+      rows of sparkling teeth rushing up to meet you. \nYou fall back and a great
+      serpent bursts forth coiling itself round the well towering over you."
     textToMatch: 
     itemsToDisable:
     - {fileID: 1499420218}
@@ -2804,7 +3178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: east
-  description: To the <b>east</b> is the island
+  description: To the <b>east</b> is the island.
   location: {fileID: 1450878660}
   connectionEnabled: 1
 --- !u!1 &1588784404
@@ -3045,16 +3419,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: staff
-  description: a <b>Staff</b>
+  description: a <b>Staff</b>, it has something written on it
   playerCanTake: 1
+  playerCanReadFrom: 1
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   itemEnabled: 1
   interactions:
   - action: {fileID: 11400000, guid: ec61e9e0954463d4eb14ff5173631237, type: 2}
-    responce: You lunge forward. The staff glows bursts with light, in one arcing
-      blow the serpents head is cleaved from its body. Coins erupt from the severed
-      neck, showering the room with gold. As the bodyslumps to the floor the coins
+    responce: You lunge forward. The staff glows and bursts with light, in one arcing
+      blow the serpent's head is cleaved from its body. Coins erupt from the severed
+      neck, showering the room with gold. As the body slumps to the floor the coins
       pump forth like blood.
     textToMatch: 
     itemsToDisable:
@@ -3067,6 +3442,14 @@ MonoBehaviour:
     - {fileID: 1226884730}
     - {fileID: 152730723}
     - {fileID: 1750217004}
+    teleportLocation: {fileID: 0}
+  - action: {fileID: 11400000, guid: b734fb7aa81d89743986b52d0535ee99, type: 2}
+    responce: It says "This mighty staff can eradicate any reptile".
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 145473820}
 --- !u!1 &1783487452
@@ -3115,15 +3498,163 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationName: Dock
-  description: You find yourself walking down a stone jetty, as you move forward,
+  description: 'You find yourself walking down a stone jetty.
+
+    As you move forward,
     slowly a hooded figure materialises from the mist. A Ferryman stands in his boat,
-    it rocks in the gathering wind ringing thearrival bell.
+    it rocks in the gathering wind, ringing the arrival bell.'
   connections:
   - {fileID: 753938560}
   items:
   - {fileID: 842488491}
   - {fileID: 1477035567}
   - {fileID: 958625442}
+--- !u!1 &1789335883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1789335884}
+  - component: {fileID: 1789335887}
+  - component: {fileID: 1789335886}
+  - component: {fileID: 1789335885}
+  m_Layer: 5
+  m_Name: MusicSwitcherButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1789335884
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789335883}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 167831168}
+  m_Father: {fileID: 578848529}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -85.8, y: 45}
+  m_SizeDelta: {x: 120.5, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1789335885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789335883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1789335886}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 927690829}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: PauseMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8140602}
+        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+        m_MethodName: DeactivateInputField
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1789335886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789335883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.10196079, g: 0.16078432, b: 0.25490198, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1789335887
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789335883}
+  m_CullTransparentMesh: 1
 --- !u!1 &1806724342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,7 +3703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationName: Bridge
   description: "You find yourself at the water\u2019s edge. Sea worn planks tied
-    with barnacle encrusted ropes form a bridge overthe water fading into the fog."
+    with barnacle encrusted ropes form a bridge over the water fading into the fog."
   connections:
   - {fileID: 1679544701}
   - {fileID: 523056539}
@@ -3272,6 +3803,7 @@ MonoBehaviour:
   itemName: tree
   description: a large <b>Tree</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   itemEnabled: 1
@@ -3373,7 +3905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26.599976, y: 16.7251}
+  m_AnchoredPosition: {x: 26.599976, y: 53}
   m_SizeDelta: {x: -53.1998, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2005741588
@@ -3434,8 +3966,8 @@ MonoBehaviour:
 
     Hello'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f55351e3612d42a4cd72b1b1ffdad, type: 2}
+  m_sharedMaterial: {fileID: -3728546087377688401, guid: 5d9f55351e3612d42a4cd72b1b1ffdad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3495,7 +4027,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -2.5022583, y: 10.259216, z: 0.49224854, w: 3.7535706}
+  m_margin: {x: -2.5022583, y: -3.7127686, z: 0.49224854, w: 27.367905}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3568,10 +4100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationName: The End
-  description: "The Ferryman\u2019s hand clenches around the gold coins he moves
-    aside and you step onto the boat. As he casts off you look back once at this
+  description: "The Ferryman\u2019s hand clenches around the golden coins. He moves
+    aside and you step onto the boat. As he casts off, you look back once at this
     ghost land and then turn to face a wall of fog as you drift silently into the
-    unknown."
+    unknown.\n\nEND"
   connections: []
   items: []
 --- !u!1 &2014601240
@@ -3602,7 +4134,7 @@ RectTransform:
   m_GameObject: {fileID: 2014601240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.95, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2005741587}
@@ -3611,8 +4143,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 101.394775}
-  m_SizeDelta: {x: 0, y: -202.7896}
+  m_AnchoredPosition: {x: 0, y: 73.06416}
+  m_SizeDelta: {x: 0, y: -167.5739}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2014601242
 MonoBehaviour:
@@ -3713,8 +4245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationName: Causeway
   description: Reaching the shore, the walls of an ancient fortification are carved
-    into the cliff face. At the top of thecliff a stone chapel looks out over the
-    sea,
+    into the cliff face. At the top of the cliff a stone chapel looks out over the
+    sea.
   connections:
   - {fileID: 1207917702}
   - {fileID: 492622400}
@@ -3754,7 +4286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000011563, y: -29.155}
+  m_AnchoredPosition: {x: 8.26, y: -25.9}
   m_SizeDelta: {x: 196.3088, y: 33.1315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069152746
@@ -3779,8 +4311,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Return
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4a8acf263ffa19e439956a3d1940baa3, type: 2}
+  m_sharedMaterial: {fileID: 6950195252213681413, guid: 4a8acf263ffa19e439956a3d1940baa3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3804,8 +4336,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3901,6 +4433,7 @@ MonoBehaviour:
   itemName: statue
   description: a smashed <b>Statue</b>
   playerCanTake: 0
+  playerCanReadFrom: 0
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   itemEnabled: 1
@@ -3915,3 +4448,144 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+--- !u!1 &2133123321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2133123323}
+  - component: {fileID: 2133123322}
+  - component: {fileID: 2133123324}
+  m_Layer: 0
+  m_Name: SoundSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2133123322
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133123321}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a75a44e4b1664ac46914c3760ac17b8d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2133123323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133123321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 163.34921, y: 448.83432, z: -4.686467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2133123324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133123321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e4702e4a7023548abf2e13c25a1073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

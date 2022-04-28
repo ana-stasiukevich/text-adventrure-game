@@ -1,21 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Actions/Inventory")]
 public class Inventory : Action
 {
-    public override void RespondToInput(GameController controller, string noun)
+    public override void RespondToInput(TextController controller, string noun)
     {
         if (controller.player.inventory.Count == 0)
         {
-            controller.currentText.text = "You have nothing.";
+            controller.currentText.text = "You have nothing\n" ;
             return;
         }
 
         string result = "You have ";
+
         bool first = true;
         bool second = false;
+
         foreach (Item item in controller.player.inventory)
         {
             if (first)
@@ -33,9 +33,8 @@ public class Inventory : Action
 
             else
                 result += ", a " + item.itemName;
-            
         }
 
-        controller.currentText.text = result;
+        controller.currentText.text = result + "\n";
     }
 }

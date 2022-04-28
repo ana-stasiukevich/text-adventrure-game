@@ -1,27 +1,15 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Location : MonoBehaviour
 {
-    // Start is called before the first frame update
     public string locationName;
+
     [TextArea]
     public string description;
+
     public Connection[] connections;
-    public List<Item> items = new List<Item>();
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<Item> items = new();
 
     public string GetItemsText()
     {
@@ -29,8 +17,10 @@ public class Location : MonoBehaviour
         {
             return "";
         }
+
         string result = "You see ";
         bool first = true;
+
         foreach(Item item in items)
         {
             if (item.itemEnabled)
@@ -41,18 +31,21 @@ public class Location : MonoBehaviour
             }
             
         }
+
         result += "\n";
         return result;
     }
     public string GetConnectionsText()
     {
         string result = "";
+
         foreach(Connection connection in connections)
         {
             if (connection.connectionEnabled)
                 result += connection.description + "\n";
         }
-        return result;
+
+        return result += "\n";
     }
 
     internal bool HasItem(Item itemToCheck)
@@ -73,6 +66,7 @@ public class Location : MonoBehaviour
             if (connection.connectionName.ToLower() == connectionNoun.ToLower())
             return connection;
         }
+
         return null;
     }
 }
