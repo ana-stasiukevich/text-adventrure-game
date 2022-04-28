@@ -1,7 +1,7 @@
 ![The_Return (1)](https://user-images.githubusercontent.com/93325983/165730659-ee6c5323-b8f7-4056-a94d-b2df05cc9621.png)
 # The Return - a text adventure game
 ### Objective
-You find youself on a odd and uncanny misty island. Find your way out.
+You find yourself on an odd and uncanny misty island. Find your way out.
 
 ### Where to play?
 Web version is available at https://ana-stasiukevich.github.io/the-return/
